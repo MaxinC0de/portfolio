@@ -1,0 +1,25 @@
+@import "../../assets/scss\ config/import-all.scss";
+
+.wrapper {
+    @extend %center;
+    flex-direction: column;
+    a {
+        @extend %strong;
+        font-size: 18px;
+        text-decoration: underline;
+        margin-bottom: 7vh;
+        @include respond-to($m) {font-size: 14px;}
+    }
+    h1 {
+        font-size: 288px;
+        color: $main-color;
+        @include respond-to($m) {font-size: 96px; margin: 10vh 0 10vh 0;}
+    }
+    h2 {
+        font-size: 36px;
+        margin-top: 5vh;
+        margin-bottom: 7vh;
+        color: $main-color;
+        @include respond-to($m) {font-size: 18px; text-align: center; margin-bottom: 18vh;}
+    }
+}

@@ -1,0 +1,21 @@
+@import "../../assets/scss\ config/import-all.scss";
+
+.wrapper {
+    position: relative;
+    height: calc(30vw - 10vh);
+    @include respond-to($m) {height: 100%;}
+    img {
+        @include setSize(100%, 100%);
+        border-radius: 10px;
+        object-fit: cover;
+        @include respond-to($m) {border-radius: 10px; height: calc(70vw - 10vh);}
+    }
+    h1 {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        color: $white;
+        font: {size: 1.14vw; weight: 700;}
+        @include respond-to($m) {font-size: 18px; left: 20px;}
+    }
+}

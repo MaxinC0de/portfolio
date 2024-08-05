@@ -1,0 +1,16 @@
+@import "../../assets/scss\ config/import-all.scss";
+@import "../../assets/global.scss";
+
+.li {
+    @extend %collapsible;
+    margin-top: 30px;
+    @include respond-to($m) {font-size: 12px; margin-top: 10px; width: 84vw;}
+    img {
+        @include respond-to($m) {width: 15px;}
+    }
+}
+.p {
+    @extend %pCollapsible;
+    width: 69vw;
+    @include respond-to($m) {width: 82.5vw;}
+}

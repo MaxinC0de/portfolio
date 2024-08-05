@@ -1,0 +1,23 @@
+@import "../../assets/scss\ config/import-all.scss";
+
+.wrapper {
+    @extend %center;
+    justify-content: space-between;
+    margin: 30px auto 50px auto;
+    @include respond-to($m) {margin: 20px auto;}
+    img {
+        @include setSize(210px, 68px);
+        @include respond-to($m) {width: 145px; height: 46px;}
+    }
+    nav {
+        a {
+            @extend %strong;
+            margin-left: 4vw;
+            font-size: 24px;
+            @include respond-to($m) {font-size: 12px;}
+        }
+        .active {
+            text-decoration: underline;
+        }
+    }
+}

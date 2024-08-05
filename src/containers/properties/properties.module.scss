@@ -1,0 +1,128 @@
+@import "../../assets/scss\ config/import-all.scss";
+@import "../../assets/global.scss";
+
+.img {
+    @extend %center;
+    height: 35vh;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.ul {
+    display: flex;
+    width: 90vw;
+    margin: 10px auto;
+    @include respond-to($m) {flex-direction: column;}
+    h1 {
+        color: $main-color;
+        font-size: 36px;
+        font-weight: 700;
+        width: 500px;
+        @include respond-to($m) {font-size: 18px; width: 350px;}
+    }
+    h2 {
+        font-size: 18px;
+        margin-top: 4px;
+        @include respond-to($m) {font-size: 14px;}
+    }
+    .divTags {
+        display: flex;
+        flex-wrap: wrap;
+        .tag {
+            @extend %strong;
+            background-color: $main-color;
+            padding: 5px 20px 5px 20px;
+            border-radius: 10px;
+            color: $white;
+            margin-right: 12px;
+            font-size: 14px;
+            font-weight: 400;
+            @include respond-to($m) {font-size: 10px; border-radius: 6px; margin-bottom: 10px;}
+        }
+    }
+    .wrapperHost {
+        margin-left: auto;
+        @include respond-to($m) {display: flex; flex-direction: row-reverse; margin: 0; justify-content: center;}
+        .hostProfile {
+            display: flex;
+            vertical-align: top;
+            h4 {
+                color: $main-color;
+                width: 40px;
+                margin-right: 8px;
+                text-align: right;
+                text-align-last: right;
+                display: flex;
+                justify-content: right;
+                @include respond-to($m) {font-size: 12px;}
+            }
+            .circle {
+                overflow: hidden;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $hard-grey;
+                @include respond-to($m) {@include setSize(32px, 32px);}
+                .hostPicture {
+                    width: 50px;
+                    height: 50px;
+                    @include respond-to($m) {@include setSize(32px, 32px);}
+                }
+            }
+        }
+        .star {
+            margin-top: 30px;
+            vertical-align: bottom;
+            width: 20px;
+            margin-left: 5px;
+            @include respond-to($m) {margin: 15px 2px;}
+        }
+        .pink {
+            filter: brightness(0) saturate(100%) invert(67%) sepia(59%) saturate(4429%) hue-rotate(319deg) brightness(98%) contrast(125%);
+        }
+        .grey {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(4406%) hue-rotate(177deg) brightness(115%) contrast(78%);
+        }    
+    }
+}
+
+.divCollapsibles {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 5px auto;
+    @include respond-to($m) {flex-direction: column;}
+    .collapsible {
+        @extend %collapsible;
+        width: 41vw;
+        @include setSize(41vw, 40px);
+        font-size: 18px;
+        border-radius: 10px;
+        @include respond-to($m) {font-size: 13px; border-radius: 5px; margin: 0 0 10px 0; @include setSize(95%, 30px); }
+    }
+    .collapsibleLeft {
+        @extend %collapsible;
+        @include setSize(41vw, 40px);
+        font-size: 18px;
+        @include respond-to($m) {font-size: 13px; border-radius: 5px; margin: 10px 0; @include setSize(95%, 30px); }
+    }
+    .p {
+        @extend %pCollapsible;
+        width: 40vw;
+        @include respond-to($m) {width: 84vw; margin-left: 0;}
+    }   
+    img {
+        @include respond-to($m) {@include setSize(15px, 15px)}
+    }
+}
+
+ol {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    @include respond-to($m) {margin-left: auto;}
+}
+
+li {
+    @include respond-to($m) {align-items: center;}
+}

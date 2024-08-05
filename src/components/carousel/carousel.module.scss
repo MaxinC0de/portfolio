@@ -1,0 +1,32 @@
+@import "../../assets/scss\ config/import-all.scss";
+
+.wrapper {
+    @extend %center;
+    position: relative;
+    .left {
+        @include arrow(left);
+        left: 0;
+        margin: 0;
+        @include respond-to($m) {width: 5vw; height: 5vh; left: 2vw;}
+    }
+    .right {
+        @include arrow(right);
+        right: 0;
+        margin: 0;
+        @include respond-to($m) {width: 5vw; height: 5vh; right: 2vw;}
+    }
+    img {
+        object-fit: cover;
+        border-radius: 25px;
+        height: 415px;
+        width: 100%;
+        @include respond-to($m) {@include setSize(100%, 255px);}
+    }
+    .counting {
+        color: #fff;
+        position: absolute;
+        bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}

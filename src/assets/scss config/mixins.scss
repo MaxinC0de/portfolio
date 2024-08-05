@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+@mixin respond-to($breakpoint) {
+    @media (max-width: $m) { @content; }
+  }
+ 
+@mixin marginCenter($margin) {
+  margin: $margin auto;
+}
+
+@mixin setSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin arrow($direction) {
+  position: absolute;
+  #{$direction}: 6vw;
+  width: 96px;
+  height: 120px;
+  margin-bottom: 12px;
+  z-index: 999;
+}

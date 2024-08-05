@@ -1,0 +1,25 @@
+@import "../../assets/scss\ config/import-all.scss";
+
+.span {
+    @extend %center;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.69); 
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.69);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    img {
+        position: relative;
+        object-fit: cover;
+        height: 220px;
+        width: 100%;
+        border-radius: 20px;
+        filter: brightness(0.5);
+        @include respond-to($m) {@include setSize(100%, 110px);}
+    }
+    h1 {
+        color: $white;
+        position: absolute;
+        z-index: 999;
+        text-shadow: 2px 2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px 0px 0 #000, 0px 2px 0 #000, -2px 0px 0 #000, 0px -2px 0 #000, 0px 0px 0px rgba(0,0,0,0);
+        @include respond-to($m) {text-shadow: none; font-size: 24px; width: 225px; left: 10vw;}
+    }
+}
