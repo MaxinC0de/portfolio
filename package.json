@@ -1,9 +1,13 @@
 {
   "homepage": "https://MaxinC0de.github.io/portfolio",
   "dependencies": {
+    "@fontsource/montserrat": "^5.0.18",
     "gh-pages": "^6.1.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "sass": "^1.77.8",
+    "web-vitals": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
