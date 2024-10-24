@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.b1d41075.css",
+    "main.js": "/portfolio/static/js/main.55b6f732.js",
+    "static/js/488.50442ee8.chunk.js": "/portfolio/static/js/488.50442ee8.chunk.js",
+    "static/media/graph.png": "/portfolio/static/media/graph.f0b6d411c270ba69772e.png",
+    "static/media/montserrat-latin-400-normal.woff": "/portfolio/static/media/montserrat-latin-400-normal.b48c3d9a8c0a49c1c7b4.woff",
+    "static/media/montserrat-latin-ext-400-normal.woff": "/portfolio/static/media/montserrat-latin-ext-400-normal.cf42d14e809c6fdc0929.woff",
+    "static/media/montserrat-latin-400-normal.woff2": "/portfolio/static/media/montserrat-latin-400-normal.9ef09180105730e3cb92.woff2",
+    "static/media/montserrat-latin-ext-400-normal.woff2": "/portfolio/static/media/montserrat-latin-ext-400-normal.83d2d15dd908a3cf998f.woff2",
+    "static/media/montserrat-cyrillic-ext-400-normal.woff": "/portfolio/static/media/montserrat-cyrillic-ext-400-normal.183f43730b586802d1a0.woff",
+    "static/media/montserrat-cyrillic-400-normal.woff": "/portfolio/static/media/montserrat-cyrillic-400-normal.439a7e91c905d22b3543.woff",
+    "static/media/website.jpg": "/portfolio/static/media/website.51adeb73ab3f1ad04f1a.jpg",
+    "static/media/montserrat-cyrillic-ext-400-normal.woff2": "/portfolio/static/media/montserrat-cyrillic-ext-400-normal.32618c7b62b4ab3c0aff.woff2",
+    "static/media/montserrat-cyrillic-400-normal.woff2": "/portfolio/static/media/montserrat-cyrillic-400-normal.4f7a9c3142f9879900c9.woff2",
+    "static/media/montserrat-vietnamese-400-normal.woff": "/portfolio/static/media/montserrat-vietnamese-400-normal.44e6450ead6330cb0b77.woff",
+    "static/media/montserrat-vietnamese-400-normal.woff2": "/portfolio/static/media/montserrat-vietnamese-400-normal.176348415471f3e062e6.woff2",
+    "index.html": "/portfolio/index.html",
+    "main.b1d41075.css.map": "/portfolio/static/css/main.b1d41075.css.map",
+    "main.55b6f732.js.map": "/portfolio/static/js/main.55b6f732.js.map",
+    "488.50442ee8.chunk.js.map": "/portfolio/static/js/488.50442ee8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1d41075.css",
+    "static/js/main.55b6f732.js"
+  ]
+}
