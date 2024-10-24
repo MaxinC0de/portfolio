@@ -1,0 +1,44 @@
+@import "./mixins.scss";
+
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+%strong {
+    font-weight: 900;
+}
+
+%collapsible {
+    @extend %center;
+    position: relative;
+    width: 70vw;
+    @include marginCenter(15px);
+    padding: 0.4rem;
+    color: $white;
+    background-color: $main-color;
+    border-radius: 4px;
+    @extend %strong;
+    font-weight: 600;
+    padding-left: 15px;
+    img {
+        margin-left: auto;
+        margin-right: 10px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(7491%) hue-rotate(53deg) brightness(105%) contrast(107%);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+%pCollapsible {
+    width: 68vw;
+    @include marginCenter(0);
+    background-color: $light-grey;
+    padding: 15px;
+    margin-top: -20px;
+    border-radius: 0 0 4px 4px;
+}

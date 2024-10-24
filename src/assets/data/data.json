@@ -1,0 +1,30 @@
+[
+    {
+        "logos": [
+        "/logos/html5.png", "/logos/react.png",
+        "/logos/css.png", "/logos/git.png", 
+        "/logos/js.png", "/logos/mongo.png",
+        "/logos/nodejs.png", "/logos/postman.png",
+        "/logos/sass.png", "/logos/tailwind.png",
+        "/logos/redux.png", "/logos/github.png"
+        ],
+        "cards": [
+            {
+                "title": "Kasa",
+                "stack": ["/logos/react.png"],
+                "image": "/imagesProjects/p1image.png",
+                "description": "Lorem Ipsum",
+                "githubUrl": "https://github.com/MaxinC0de/KASA",
+                "websiteUrl": "https://kasa-olive-psi.vercel.app/"
+            },
+            {
+                "title": "Argent Bank",
+                "stack": ["/logos/react.png"],
+                "image": "/imagesProjects/p2image.png",
+                "description": "Lorem Ipsum",
+                "githubUrl": "https://github.com/MaxinC0de/P10",
+                "websiteUrl": "https://p10-nu.vercel.app/"
+            }
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+@import "../../assets/scss\ config/import-all.scss";
+
+.wrapper {
+    @extend %center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    height: 210px;
+    background-color: #000;
+    @include respond-to($m) {@include setSize(100%, 210px);}
+    img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(7491%) hue-rotate(53deg) brightness(105%) contrast(107%);
+        width: 122px;
+        height: 40px;
+        margin-bottom: 30px;
+        @include respond-to($m) {margin-bottom: 12px;}
+    }
+    p {
+        color: $white;
+        font: {
+            weight: 500;
+            size: 24px;
+        } 
+        @include respond-to($m) {font-size: 12px; width: 130px; text-align: center;}
+    }
+}
