@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="flex flex-col gap-y-3 mt-6">
+    <section className="flex flex-col gap-y-3 mt-6 md:w-[23vw] md:mt-0">
       <h1 className="title mb-1">A PROPOS DE NOUS</h1>
       <p>
         Studio Regenade, est un studio créatif indépendant qui conçoit des

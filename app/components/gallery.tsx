@@ -10,10 +10,16 @@ export default function Gallery() {
   const isMobile = useIsMobile()
   const { isToggled, animatingIndex, setAnimatingIndex, handleToggle } =
     useToggleAnimation()
-
   return (
-    <div>
-      <section className="flex flex-col mx-auto">
+    <div className="md:flex md:flex-row-reverse">
+      {!isMobile && (
+        <Details
+          i={isToggled}
+          isMobile={false}
+          setIsToggled={setAnimatingIndex}
+        />
+      )}
+      <section className="flex flex-col mx-auto md:w-[23vw]">
         <h1 className="title mb-3">PROJETS</h1>
         {data.map((item, i) => (
           <GalleryItem
@@ -25,17 +31,10 @@ export default function Gallery() {
             animatingIndex={animatingIndex}
             handleToggle={handleToggle}
             setAnimatingIndex={setAnimatingIndex}
+            isMobile={isMobile}
           />
         ))}
       </section>
-
-      {!isMobile && (
-        <Details
-          i={isToggled}
-          isMobile={false}
-          setIsToggled={setAnimatingIndex}
-        />
-      )}
     </div>
   )
 }

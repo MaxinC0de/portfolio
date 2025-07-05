@@ -6,11 +6,14 @@ import Nav from "./components/nav"
 
 export default function Home() {
   return (
-    <div>
+    <div className="md:overflow-hidden">
       <Nav />
       <Banner />
-      <Gallery />
-      <About />
+      <div className="md:flex md:flex-row-reverse md:justify-end md:h-[77vh]">
+        <Gallery />
+        <div className="w-[0.5px] h-auto bg-white opacity-60 mx-[2vw] hidden md:block"></div>
+        <About />
+      </div>
       <Footer />
     </div>
   )

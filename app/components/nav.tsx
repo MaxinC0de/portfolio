@@ -15,17 +15,19 @@ export default function Nav() {
         alt=""
         width={700}
         height={300}
-        className="w-12 h-auto"
+        className="w-12 md:w-16 h-auto"
       />
-      {!isMobile && <InfiniteMarquee />}
-      <button
-        onClick={() => {
-          setIsToggled(true)
-        }}
-        className="text-red border-red border-1 font-black tracking-tighter rounded-lg px-2 py-0.5"
-      >
-        CONTACT
-      </button>
+      <div className="md:flex md:items-center">
+        {!isMobile && <InfiniteMarquee />}
+        <button
+          onClick={() => {
+            setIsToggled(true)
+          }}
+          className="text-red border-red border-1 font-black tracking-tighter rounded-lg px-2 py-0.5"
+        >
+          CONTACT
+        </button>
+      </div>
     </nav>
   )
 }

@@ -18,7 +18,7 @@ export default function InfiniteMarquee() {
       const width = contentRef?.current.offsetWidth / 2
       gsap.to(contentRef.current, {
         x: -width,
-        duration: 6,
+        duration: 15,
         ease: "linear",
         repeat: -1,
       })

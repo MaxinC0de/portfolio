@@ -15,6 +15,7 @@ export default function GalleryItem({
   animatingIndex,
   handleToggle,
   setAnimatingIndex,
+  isMobile,
 }) {
   const containerRef = useRef(null)
   const isOpen = isToggled === i
@@ -30,21 +31,27 @@ export default function GalleryItem({
         onClick={() => handleToggle(i)}
         className="flex justify-between my-3 cursor-pointer select-none"
       >
-        <p className={`font-bold ${isToggled === i ? "text-red" : ""}`}>
+        <p
+          className={`font-bold md:w-[65%] ${isToggled === i ? "text-red" : ""}`}
+        >
           {title}
         </p>
         <div className="flex items-center">
-          <p className={`mr-[10vw] text-xs ${messina.variable}`}>{type}</p>
+          <p className={`mr-[10vw] md:mr-0 text-xs ${messina.variable}`}>
+            {type}
+          </p>
           <ToggleButton />
         </div>
       </article>
-      <div
-        ref={animatingIndex === i ? containerRef : null}
-        className="overflow-hidden"
-        style={{ height: 0 }}
-      >
-        {(isOpen || animatingIndex === i) && <Details i={i} isMobile={true} />}
-      </div>
+      {isMobile && (
+        <div
+          ref={animatingIndex === i ? containerRef : null}
+          className="overflow-hidden"
+          style={{ height: 0 }}
+        >
+          {isOpen && animatingIndex === i && <Details i={i} isMobile={true} />}
+        </div>
+      )}
       <Divider plus={false} horizontal={true} />
     </div>
   )
