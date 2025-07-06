@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import SmoothScrollWrapper from "../../marketing/app/components/smoothScroll"
+import SmoothScrollWrapper from "./components/smoothScroll"
 
 export const metadata: Metadata = {
   title: "Create Next App",
