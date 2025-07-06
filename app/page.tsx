@@ -7,7 +7,7 @@ import Nav from "./components/nav"
 
 export default function Home() {
   return (
-    <div className="md:overflow-hidden">
+    <div className="md:overflow-hidden data-scroll-container">
       <LocomotiveWrapper>
         <Nav />
         <Banner />
