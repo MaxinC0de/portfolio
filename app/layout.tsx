@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import SmoothScrollWrapper from "./components/smoothScroll"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased bg-black text-[#fffef4] p-4`}>
-        <SmoothScrollWrapper>{children}</SmoothScrollWrapper>
+        {children}
       </body>
     </html>
   )
