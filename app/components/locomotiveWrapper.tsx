@@ -6,13 +6,19 @@ export default function LocomotiveWrapper() {
   useEffect(() => {
     const LocomotiveScroll = require("locomotive-scroll").default
 
+    const container = document.querySelector("[data-scroll-container]")
+    if (!container) {
+      console.warn("LocomotiveScroll container not found")
+      return
+    }
+
     const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
+      el: container,
       smooth: true,
     })
 
-    if (scroll) {
-      return () => scroll.destroy()
+    return () => {
+      if (scroll) scroll.destroy()
     }
   }, [])
 
