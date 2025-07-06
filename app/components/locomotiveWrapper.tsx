@@ -11,7 +11,9 @@ export default function LocomotiveWrapper() {
       smooth: true,
     })
 
-    return () => scroll.destroy()
+    if (scroll) {
+      return () => scroll.destroy()
+    }
   }, [])
 
   return null
