@@ -4,8 +4,7 @@ export function useIsMobile(breakpoint = 768) {
   const getIsMobile = () =>
     typeof window !== "undefined"
       ? window.matchMedia(`(max-width: ${breakpoint}px)`).matches
-      : false // fallback if SSR
-
+      : false
   const [isMobile, setIsMobile] = useState(getIsMobile)
 
   useEffect(() => {

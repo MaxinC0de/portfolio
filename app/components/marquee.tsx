@@ -29,7 +29,7 @@ export default function Marquee() {
   return (
     <section
       ref={containerRef}
-      className="overflow-hidden w-full md:w-[30vw] mx-auto my-6 md:m-0 md:mr-[12vw] md:blur-[2px] md:hover:blur-none cursor-pointer transition-all duration-500"
+      className="overflow-hidden w-full md:w-[30vw] mx-auto my-6 md:m-0 md:mr-[4vw] md:blur-[2px] md:hover:blur-none cursor-pointer transition-all duration-500"
     >
       <div ref={contentRef} className="inline-flex whitespace-nowrap">
         {LABELS.map((label, i) => (

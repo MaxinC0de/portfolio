@@ -2,10 +2,10 @@ import { data } from "../data"
 import Divider from "./divider"
 import ProjectCard from "./projectCard"
 
-export default function Projects() {
+export default function ProjectsMobile() {
   return (
-    <section>
-      <h1 className="title mb-6">PROJETS</h1>
+    <section className="md:w-[23vw]">
+      <h1 className="title mb-6 md:mb-3">PROJETS</h1>
       {data.map((project) => (
         <>
           <Divider isHorizontal={true} isPlus={false} />

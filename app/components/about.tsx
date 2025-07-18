@@ -9,8 +9,8 @@ export default function About() {
     "Retouche photo",
   ]
   return (
-    <section className="">
-      <h1 className="title my-6">A PROPOS DE NOUS</h1>
+    <section className="my-6 md:my-0 md:mt-0 md:mb-3 md:w-[23vw]">
+      <h1 className="title my-6 md:mb-3 md:mt-0">A PROPOS DE NOUS</h1>
       <p>
         Studio Regenade, est un studio créatif indépendant qui conçoit des
         marques, des expériences numériques et des solutions technologiques pour
