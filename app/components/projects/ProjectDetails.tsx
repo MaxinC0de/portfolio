@@ -20,15 +20,37 @@ export default function ProjectDetails() {
     >
       <div ref={contentRef} className="w-full">
         {!infos ? (
-          <Image
-            src={project.src}
-            alt={project.title}
-            width={0}
-            height={0}
-            sizes="(min-width: 768px) 44vw, 100vw"
-            className="w-full h-auto cursor-pointer object-contain"
-            onClick={() => setModalImage(project.src)}
-          />
+          project.name === "riva" || project.name === "lms" ? (
+            <Image
+              src={project.src}
+              alt={project.title}
+              width={0}
+              height={0}
+              sizes="(min-width: 768px) 44vw, 100vw"
+              className="w-full h-auto cursor-pointer object-contain"
+              onClick={() => setModalImage(project.src)}
+            />
+          ) : (
+            <div className="flex flex-col">
+              <video
+                src="/images/didus.webm"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="flex h-auto rounded-lg mb-1"
+              />
+              <Image
+                src={project.src}
+                alt={project.title}
+                width={0}
+                height={0}
+                sizes="(min-width: 768px) 44vw, 100vw"
+                className="w-full h-auto cursor-pointer object-contain"
+                onClick={() => setModalImage(project.src)}
+              />
+            </div>
+          )
         ) : (
           <>
             <p className="w-full">{project?.description}</p>

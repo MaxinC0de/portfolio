@@ -5,7 +5,7 @@ import { projectsData } from "../../constants/projectsData"
 
 export default function ProjectsList() {
   return (
-    <section className="md:w-[23vw]">
+    <section className="md:w-full">
       <h1 className="title mb-6 md:mb-3">PROJETS</h1>
       {projectsData.map((project) => (
         <Fragment key={project.id}>

@@ -3,9 +3,9 @@ export const projectsData = [
     id: 0,
     name: "didus",
     title: "DIDUS ART",
-    type: "E-COMMERCE",
+    type: "ART",
     year: "2024",
-    src: "",
+    src: "/images/projects/didus.webp",
     description: [
       "DIDUS ART nous est arrivé avec un site web vieillissant et une présence sociale presque absente. Les photos mal cadrées et les visuels déconnectés de leur audience nuisaient à la qualité perçue de leur travail. Nous avons tout repensé — du design du site à l’univers visuel sur Instagram. Résultat : une marque artistique avec une image cohérente, professionnelle, et surtout, en phase avec les attentes esthétiques de sa communauté. Chaque élément visuel, chaque post, chaque pixel est désormais une vitrine de leur art.",
     ],
@@ -36,7 +36,7 @@ export const projectsData = [
     title: "LA MAISON DU SOLITAIRE",
     type: "E-COMMERCE",
     year: "2024",
-    src: [""],
+    src: "/images/projects/lms.webp",
     description: [
       "Cette marque n’avait aucune empreinte digitale — pas de site, pas de canal d’acquisition en ligne. Elle voulait attirer de nouveaux clients sans dépendre uniquement du bouche-à-oreille. Ensemble, nous avons imaginé un site élégant, clair, centré sur l’histoire du produit et l’émotion de l’acte d’achat. Plus qu’un simple site vitrine, LA MAISON DU SOLITAIRE s’est dotée d’un point d’entrée stratégique vers un nouveau public, avec une esthétique minimaliste qui laisse briller l’essentiel : leur savoir-faire.",
     ],
@@ -50,7 +50,7 @@ export const projectsData = [
     title: "RIVA EXCELLENCE",
     type: "VENTE",
     year: "2024",
-    src: "/images/projects/riva.png",
+    src: "/images/projects/riva.webp",
     description: [
       "RIVA EXCELLENCE, une boutique d’horlogerie à l’ancienne, a franchi le pas vers le numérique avec nous. L’objectif : ne pas perdre l’âme artisanale, mais la traduire dans un langage digital moderne. Nous avons repensé leur image, créé un site vitrine raffiné et soigné, et produit des visuels haut de gamme pour les réseaux sociaux. Chaque montre exposée en ligne raconte désormais une histoire — celle d’un artisanat intemporel, rendu accessible au public connecté d’aujourd’hui.",
     ],

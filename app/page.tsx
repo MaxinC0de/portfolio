@@ -8,6 +8,7 @@ import ModalImage from "@ui/ModalImage"
 import Nav from "@ui/Nav"
 import ProjectDetails from "@projects/ProjectDetails"
 import ProjectsList from "@projects/ProjectsList"
+import CustomCursor from "./components/ui/Cursor"
 
 const VerticalDivider = () => (
   <div className="hidden md:block w-[0.5px] mx-3 h-full bg-white opacity-40" />
@@ -41,6 +42,7 @@ export default function Home() {
       <Footer />
       <ContactForm />
       <ModalImage />
+      <CustomCursor />
     </div>
   )
 }

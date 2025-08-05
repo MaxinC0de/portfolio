@@ -4,6 +4,12 @@
   @apply text-[#909090] font-bold;
 }
 
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
 .text-red {
   color: #ff0000;
 }
@@ -41,4 +47,9 @@ body {
 
 .modal-fade.show {
   opacity: 1;
+}
+
+::selection {
+  background-color: white;
+  color: black;
 }
