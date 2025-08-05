@@ -1,17 +1,21 @@
-import About from "./components/sections/About"
-import Banner from "./components/sections/Banner"
-import ContactForm from "./components/contact/ContactForm"
-import Divider from "./components/divider"
-import Footer from "./components/footer"
-import Infos from "./components/projects/Infos"
-import ModalImage from "./components/modalImage"
-import Nav from "./components/nav"
-import ProjectDetails from "./components/projectDetails"
-import Projects from "./components/projects/ProjectsLists"
+import About from "@sections/About"
+import Banner from "@sections/Banner"
+import ContactForm from "@contact/ContactForm"
+import Divider from "@ui/Divider"
+import Footer from "@ui/Footer"
+import Infos from "@projects/Infos"
+import ModalImage from "@ui/ModalImage"
+import Nav from "@ui/Nav"
+import ProjectDetails from "@projects/ProjectDetails"
+import ProjectsList from "@projects/ProjectsList"
+
+const VerticalDivider = () => (
+  <div className="hidden md:block w-[0.5px] mx-3 h-full bg-white opacity-40" />
+)
 
 export default function Home() {
   return (
-    <div className="relative md:text-xs md:flex md:flex-col md:h-screen w-full max-w-[1440px] mx-auto p-3">
+    <div className="relative md:text-xs md:flex md:flex-col md:h-screen w-full mx-auto p-3">
       <Nav />
       <Banner />
       <div className="md:flex md:flex-row-reverse md:flex-grow md:min-h-0">
@@ -24,16 +28,16 @@ export default function Home() {
             <ProjectDetails />
           </div>
         </div>
-        <div className="hidden md:block w-[0.5px] mx-3 h-full bg-white opacity-40"></div>
+        <VerticalDivider />
         <div className="flex-grow">
-          <Projects />
+          <ProjectsList />
         </div>
-        <div className="hidden md:block w-[0.5px] mx-3 h-full bg-white opacity-40"></div>
+        <VerticalDivider />
         <div className="flex-shrink-0">
           <About />
         </div>
       </div>
-      <Divider isHorizontal={true} isPlus={true} />
+      <Divider isPlus />
       <Footer />
       <ContactForm />
       <ModalImage />

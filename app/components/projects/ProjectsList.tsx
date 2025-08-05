@@ -3,7 +3,7 @@ import Divider from "../ui/Divider"
 import ProjectCard from "./ProjectCard"
 import { projectsData } from "../../constants/projectsData"
 
-export default function ProjectsLists() {
+export default function ProjectsList() {
   return (
     <section className="md:w-[23vw]">
       <h1 className="title mb-6 md:mb-3">PROJETS</h1>

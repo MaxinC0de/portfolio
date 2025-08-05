@@ -16,7 +16,7 @@ export default function ProjectDetails() {
   return (
     <article
       ref={containerRef}
-      className="flex flex-col flex-1 w-full md:overflow-y-auto md:min-h-0 scroll-hidden"
+      className="flex flex-col flex-1 w-full md:overflow-y-auto md:min-h-0 scroll-hidden mb-6"
     >
       <div ref={contentRef} className="w-full">
         {!infos ? (
