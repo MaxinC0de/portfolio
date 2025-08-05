@@ -4,7 +4,7 @@ import { ABOUT_LABELS } from "../../constants/about"
 
 export default function About() {
   return (
-    <section className="my-6 md:my-0 md:mt-0 md:mb-3 md:w-[23vw]">
+    <section className="my-6 md:my-0 md:mt-0 md:mb-3 md:w-[23vw] overflow-y-scroll scroll-hidden">
       <h1 className="title my-6 md:mb-3 md:mt-0">A PROPOS DE NOUS</h1>
       <p>
         Studio Regenade, est un studio créatif indépendant qui conçoit des

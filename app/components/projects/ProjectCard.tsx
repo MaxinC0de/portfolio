@@ -27,7 +27,7 @@ export default function ProjectCard({ project }) {
             {project.title}
           </p>
           <div className="flex items-center text-xs">
-            <p className="text-[10px]">{project.type}</p>
+            <p className="md:text-[10px]">{project.type}</p>
             <div className="ml-[20vw] border-1 border-red p-1 text-red md:hidden">
               <Plus />
             </div>
