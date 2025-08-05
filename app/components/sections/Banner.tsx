@@ -1,9 +1,10 @@
 "use client"
 
 import Image from "next/image"
-import Divider from "./divider"
-import { useIsMobile } from "../hooks/useIsMobile"
-import Marquee from "./marquee"
+import { useIsMobile } from "@/app/hooks/useIsMobile"
+import Divider from "../ui/Divider"
+import Marquee from "../ui/Marquee"
+import { BANNER_IMAGES } from "../../constants/banner"
 
 export default function Banner() {
   const isMobile = useIsMobile()
@@ -11,13 +12,13 @@ export default function Banner() {
     <section className="flex flex-col">
       <Divider isHorizontal={true} isPlus={true} />
       <Image
-        src={`/images/${isMobile ? "bannerMobile.webp" : "bannerDesktop.svg"}`}
-        alt=""
+        src={isMobile ? BANNER_IMAGES.mobile : BANNER_IMAGES.desktop}
+        alt="Bannière"
         width={700}
         height={300}
         className="w-full px-3 object-contain"
       />
-      <Divider isHorizontal={true} isPlus={true} />
+      <Divider isPlus />
       {isMobile && <Marquee />}
     </section>
   )

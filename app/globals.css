@@ -12,6 +12,10 @@
   border-color: #ff0000;
 }
 
+.bg-red {
+  background-color: #ff0000;
+}
+
 html,
 body {
   margin: 0;
@@ -19,4 +23,22 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+}
+
+.scroll-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-fade {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-fade.show {
+  opacity: 1;
 }

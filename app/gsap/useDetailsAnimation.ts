@@ -1,12 +1,12 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
-export const useDetailsAnimation = (containerRef, isToggled) => {
+export const useDetailsAnimation = (containerRef, isToggled, project) => {
   useGSAP(() => {
     const el = containerRef.current
     if (!el) return
 
-    if (isToggled) {
+    if (isToggled === project.id) {
       gsap.set(el, { height: "auto" })
       const fullHeight = el.scrollHeight
       gsap.fromTo(

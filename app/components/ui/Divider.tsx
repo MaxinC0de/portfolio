@@ -1,6 +1,6 @@
 import { Plus } from "lucide-react"
 
-export default function Divider({ isHorizontal, isPlus }) {
+export default function Divider({ isHorizontal = true, isPlus = false }) {
   return (
     <div className="flex items-center">
       {isPlus && <Plus className="size-5 opacity-40" />}
