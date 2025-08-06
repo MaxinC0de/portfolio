@@ -5,6 +5,8 @@ import { useRef } from "react"
 import { useDetailsAnimation } from "@gsap/useDetailsAnimation"
 import { useInfosHoverAnimation } from "@gsap/useInfosAnimation"
 import { useStore } from "@hooks/useStore"
+import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 
 export default function ProjectDetails() {
   const { project, isToggled, infos, setModalImage } = useStore()
@@ -12,6 +14,18 @@ export default function ProjectDetails() {
   const contentRef = useRef(null)
   useDetailsAnimation(containerRef, isToggled, project)
   useInfosHoverAnimation(contentRef, containerRef, infos)
+
+  const LinkSite = () => {
+    if (project.link !== null)
+      return (
+        <div className="flex items-center mb-3">
+          <Link href={project.link} target="_blank">
+            LIEN
+          </Link>
+          <ExternalLink className="size-3.5 ml-1" />
+        </div>
+      )
+  }
 
   if (project?.id !== isToggled || !project) return null
   return (
@@ -22,18 +36,22 @@ export default function ProjectDetails() {
       <div ref={contentRef} className="w-full">
         {!infos ? (
           project.name === "riva" || project.name === "lms" ? (
-            <Image
-              src={project.src}
-              alt={project.title}
-              width={700}
-              height={1800}
-              sizes="(min-width: 768px) 44vw, 100vw"
-              className="w-full h-auto cursor-pointer object-contain"
-              onClick={() => setModalImage(project.src)}
-              priority
-            />
+            <>
+              <LinkSite />
+              <Image
+                src={project.src}
+                alt={project.title}
+                width={700}
+                height={1800}
+                sizes="(min-width: 768px) 44vw, 100vw"
+                className="w-full h-auto cursor-pointer object-contain"
+                onClick={() => setModalImage(project.src)}
+                priority
+              />
+            </>
           ) : (
             <div className="flex flex-col">
+              <LinkSite />
               <video
                 src="/images/didus.webm"
                 autoPlay

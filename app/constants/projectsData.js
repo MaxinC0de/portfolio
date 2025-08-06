@@ -31,7 +31,7 @@ export const projectsData = [
       "ESLINT",
       "PRETTIER",
     ],
-    link: "didusart.com",
+    link: "https://didusart.com/",
     layout: [
       "isLarge",
       "isLarge",
@@ -102,7 +102,7 @@ export const projectsData = [
       "ESLINT",
       "PRETTIER",
     ],
-    link: "",
+    link: null,
     layout: [
       "isLarge",
       "isHalfRectangle",
