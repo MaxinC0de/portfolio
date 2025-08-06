@@ -20,7 +20,9 @@ export default function Banner() {
         priority
       />
       <Divider isPlus />
-      {isMobile && <Marquee />}
+      <div className="block md:hidden">
+        <Marquee />
+      </div>
     </section>
   )
 }

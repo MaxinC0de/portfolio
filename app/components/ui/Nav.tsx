@@ -1,13 +1,11 @@
 "use client"
 
 import Image from "next/image"
-import { useIsMobile } from "@hooks/useIsMobile"
 import { useContactStore } from "@hooks/useStore"
 import Marquee from "@ui/Marquee"
 import { Button } from "../../../components/ui/button"
 
 export default function Nav() {
-  const isMobile = useIsMobile()
   const { contactIsToggled, setContactIsToggled } = useContactStore()
   return (
     <nav className="flex justify-between items-center">
@@ -17,9 +15,13 @@ export default function Nav() {
         width={700}
         height={300}
         className="object-contain size-14"
+        priority
+        unoptimized
       />
       <div className="md:flex md:items-center">
-        {!isMobile && <Marquee />}
+        <div className="hidden md:block">
+          <Marquee />
+        </div>
         <Button
           onClick={() => {
             setContactIsToggled(!contactIsToggled)
