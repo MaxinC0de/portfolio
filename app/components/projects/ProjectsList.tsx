@@ -19,12 +19,12 @@ export default function ProjectsList() {
   }, [isMobile, setIsToggledStore, setProject])
   return (
     <section className="md:w-full">
-      <h1 className="title mb-6 md:mb-3">PROJETS</h1>
-      {projectsData.map((project) => (
+      <h1 className="title mb-3 md:mb-3">PROJETS</h1>
+      {projectsData.map((project, i) => (
         <Fragment key={project.id}>
           <Divider isHorizontal={true} isPlus={false} />
           <ProjectCard project={project} />
-          <Divider isHorizontal={true} isPlus={false} />
+          {i === projectsData.length - 1 && <Divider />}
         </Fragment>
       ))}
     </section>

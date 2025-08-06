@@ -19,7 +19,7 @@ export default function Banner() {
           priority
         />
       </div>
-      <div className="block md:hidden">
+      <div className="block md:hidden my-1.5">
         <Image
           src={BANNER_IMAGES.mobile}
           alt="Bannière mobile"
