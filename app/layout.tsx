@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.studio-regenade.com",
+    url: "https://www.studioregenade.com",
     siteName: "Studio Regenade",
     images: [
       {
