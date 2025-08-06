@@ -23,13 +23,13 @@ export default function ModalImage() {
     <div
       ref={overlayRef}
       style={initialStyle}
-      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/70 overflow-y-auto scroll-hidden"
+      className="absolute inset-0 z-[100] flex items-start justify-center bg-black/70 overflow-y-auto scroll-hidden"
       onClick={() => setModalImage(null)}
     >
       <div
         ref={contentRef}
         style={initialStyle}
-        className="mt-20 mb-20 w-[70vw]"
+        className="mt-20 mb-20 w-[70vw] flex flex-col items-center"
       >
         {project.name === "didus" && (
           <video
@@ -38,7 +38,7 @@ export default function ModalImage() {
             loop
             muted
             playsInline
-            className="flex h-auto rounded-lg mb-1"
+            className="flex w-[700px] h-auto rounded-lg mb-1.5"
           />
         )}
         <Image
