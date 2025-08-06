@@ -1,8 +1,11 @@
 "use client"
 
+import { useIsMobile } from "@/app/hooks/useIsMobile"
 import AnimatedCursor from "react-animated-cursor"
 
 export default function CustomCursor() {
+  const { isMobile } = useIsMobile()
+  if (isMobile) return null
   return (
     <AnimatedCursor
       innerSize={0}

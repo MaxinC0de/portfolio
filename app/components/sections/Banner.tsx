@@ -14,9 +14,10 @@ export default function Banner() {
       <Image
         src={isMobile ? BANNER_IMAGES.mobile : BANNER_IMAGES.desktop}
         alt="Bannière"
-        width={700}
-        height={300}
+        width={1040}
+        height={225}
         className="w-full px-3 object-contain"
+        priority
       />
       <Divider isPlus />
       {isMobile && <Marquee />}

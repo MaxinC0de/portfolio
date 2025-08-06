@@ -26,7 +26,7 @@ export default function Nav() {
           }}
           className="relative z-30 text-red font-bold text-lg border-1 border-red bg-black focus:border-1"
         >
-          {contactIsToggled ? "FERMER" : "CONTACT"}
+          CONTACT
         </Button>
       </div>
     </nav>
