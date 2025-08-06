@@ -18,7 +18,7 @@ export default function ProjectDetails() {
   const LinkSite = () => {
     if (project.link !== null)
       return (
-        <div className="flex items-center mb-3">
+        <div className="flex items-center mb-2">
           <Link href={project.link} target="_blank">
             LIEN
           </Link>
@@ -37,7 +37,6 @@ export default function ProjectDetails() {
         {!infos ? (
           project.name === "riva" || project.name === "lms" ? (
             <>
-              <LinkSite />
               <Image
                 src={project.src}
                 alt={project.title}
@@ -54,7 +53,6 @@ export default function ProjectDetails() {
               onClick={() => setModalImage(project.src)}
               className="flex flex-col"
             >
-              <LinkSite />
               <video
                 src="/images/didus.webm"
                 autoPlay
@@ -76,6 +74,7 @@ export default function ProjectDetails() {
           )
         ) : (
           <>
+            <LinkSite />
             <p className="w-full">{project?.description}</p>
             <div className="flex w-full mb-6 md:mb-0 gap-4">
               {[
