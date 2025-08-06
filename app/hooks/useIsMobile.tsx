@@ -6,8 +6,7 @@ export function useIsMobile() {
   useEffect(() => {
     const handleResizeOrOrientation = () => {
       const isPhone = window.innerWidth < 768
-      const isLandscape = window.matchMedia("(orientation: landscape)").matches
-      setIsMobile(isPhone && !isLandscape)
+      setIsMobile(isPhone)
     }
 
     handleResizeOrOrientation()
