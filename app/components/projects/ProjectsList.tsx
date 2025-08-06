@@ -10,7 +10,6 @@ import { useStore } from "@/app/hooks/useStore"
 export default function ProjectsList() {
   const { isMobile } = useIsMobile()
   const { setIsToggledStore, setProject } = useStore()
-
   useEffect(() => {
     if (isMobile === false && projectsData.length > 0) {
       setIsToggledStore(projectsData[0].id)

@@ -1,7 +1,8 @@
 export default {
   title: "Portfolio Studio Regenade",
+  titleTemplate: "%s | Studio Regenade",
   description:
-    "Portfolio créatif de l'entreprise Studio Regenade, présentant les projets de divers clients.",
+    "Portfolio créatif de l'entreprise Studio Regenade, présentant les projets de divers clients et nos expertises en design, développement et branding.",
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -12,7 +13,7 @@ export default {
         url: "https://www.studio-regenade.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Aperçu du site",
+        alt: "Aperçu du site Studio Regenade",
       },
     ],
   },

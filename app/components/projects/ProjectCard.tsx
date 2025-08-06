@@ -3,11 +3,13 @@
 import { useStore } from "@hooks/useStore"
 import { Plus } from "lucide-react"
 import ProjectDetails from "@projects/ProjectDetails"
+import { useIsMobile } from "@/app/hooks/useIsMobile"
 
 export default function ProjectCard({ project }) {
   const { isToggled, setIsToggledStore, setProject } = useStore()
+  const { isMobile } = useIsMobile()
   const handleClick = () => {
-    if (isToggled === project.id) {
+    if (isToggled === project.id && isMobile) {
       setIsToggledStore(null)
     } else {
       setIsToggledStore(project.id)

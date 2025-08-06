@@ -25,8 +25,8 @@ export default function ProjectDetails() {
             <Image
               src={project.src}
               alt={project.title}
-              width={0}
-              height={0}
+              width={700}
+              height={1800}
               sizes="(min-width: 768px) 44vw, 100vw"
               className="w-full h-auto cursor-pointer object-contain"
               onClick={() => setModalImage(project.src)}
@@ -45,11 +45,12 @@ export default function ProjectDetails() {
               <Image
                 src={project.src}
                 alt={project.title}
-                width={0}
-                height={0}
+                width={700}
+                height={1800}
                 sizes="(min-width: 768px) 44vw, 100vw"
                 className="w-full h-auto cursor-pointer object-contain"
                 onClick={() => setModalImage(project.src)}
+                priority
               />
             </div>
           )
