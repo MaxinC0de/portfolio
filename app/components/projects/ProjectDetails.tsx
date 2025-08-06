@@ -50,7 +50,10 @@ export default function ProjectDetails() {
               />
             </>
           ) : (
-            <div className="flex flex-col">
+            <div
+              onClick={() => setModalImage(project.src)}
+              className="flex flex-col"
+            >
               <LinkSite />
               <video
                 src="/images/didus.webm"
@@ -67,7 +70,6 @@ export default function ProjectDetails() {
                 height={1800}
                 sizes="(min-width: 768px) 44vw, 100vw"
                 className="w-full h-auto cursor-pointer object-contain"
-                onClick={() => setModalImage(project.src)}
                 priority
               />
             </div>

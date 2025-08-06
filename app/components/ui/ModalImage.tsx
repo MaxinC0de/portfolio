@@ -7,7 +7,7 @@ import { initialStyle } from "@constants/modalImage"
 import { useModalImageAnimation } from "@gsap/useModalImageAnimation"
 
 export default function ModalImage() {
-  const { modalImage, setModalImage } = useStore()
+  const { project, modalImage, setModalImage } = useStore()
   const overlayRef = useRef(null)
   const contentRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -23,7 +23,7 @@ export default function ModalImage() {
     <div
       ref={overlayRef}
       style={initialStyle}
-      className="absolute inset-0 z-[100] flex items-start justify-center bg-black/70 overflow-y-auto scroll-hidden"
+      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/70 overflow-y-auto scroll-hidden"
       onClick={() => setModalImage(null)}
     >
       <div
@@ -31,6 +31,16 @@ export default function ModalImage() {
         style={initialStyle}
         className="mt-20 mb-20 w-[70vw]"
       >
+        {project.name === "didus" && (
+          <video
+            src="/images/didus.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="flex h-auto rounded-lg mb-1"
+          />
+        )}
         <Image
           src={modalImage}
           alt="Image modale"
