@@ -1,7 +1,11 @@
+import { stretch } from "../../fonts"
+
 export default function Footer() {
   return (
     <footer className="flex justify-end mt-6">
-      <p className="opacity-50 text-xs">© {new Date().getFullYear()}</p>
+      <p className={`text-xs ${stretch.className}`}>
+        © {new Date().getFullYear()}
+      </p>
     </footer>
   )
 }
