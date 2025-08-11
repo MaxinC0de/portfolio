@@ -26,7 +26,7 @@ export default function Nav() {
           onClick={() => {
             setContactIsToggled(!contactIsToggled)
           }}
-          className="relative z-30 text-white font-bold text-lg border-1 border-red bg-red focus:border-1 rounded-xl"
+          className="relative z-30 text-[16px] text-white font-bold border-1 border-red bg-red focus:border-1 rounded-xl"
         >
           CONTACT
         </Button>
