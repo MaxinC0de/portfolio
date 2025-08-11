@@ -33,7 +33,7 @@ export default function ProjectDetails() {
       ref={containerRef}
       className="flex flex-col flex-1 w-full md:overflow-y-auto md:min-h-0 scroll-hidden mb-6"
     >
-      <div ref={contentRef} className="w-full">
+      <div ref={contentRef} className="w-full mt-3">
         {!infos ? (
           project.name === "riva" || project.name === "lms" ? (
             <>
@@ -59,7 +59,7 @@ export default function ProjectDetails() {
                 loop
                 muted
                 playsInline
-                className="flex h-auto rounded-lg mb-1"
+                className="flex h-auto rounded-2xl mb-3"
               />
               <Image
                 src={project.src}

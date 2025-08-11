@@ -4,12 +4,6 @@
   @apply text-[#909090] font-bold;
 }
 
-*,
-*::before,
-*::after {
-  cursor: none !important;
-}
-
 .text-red {
   color: #ff0000;
 }

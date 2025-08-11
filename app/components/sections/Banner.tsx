@@ -30,7 +30,7 @@ export default function Banner() {
         />
       </div>
       <Divider isPlus />
-      <div className="block md:hidden">
+      <div className="block md:hidden my-3 md:my-0">
         <Marquee />
       </div>
     </section>

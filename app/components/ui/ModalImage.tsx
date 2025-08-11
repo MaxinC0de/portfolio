@@ -23,7 +23,7 @@ export default function ModalImage() {
     <div
       ref={overlayRef}
       style={initialStyle}
-      className="absolute inset-0 z-[100] flex items-start justify-center bg-black/70 overflow-y-auto scroll-hidden"
+      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/70 overflow-y-auto scroll-hidden"
       onClick={() => setModalImage(null)}
     >
       <div
