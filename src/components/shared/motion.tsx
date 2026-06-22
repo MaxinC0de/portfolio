@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
-/** Déclenche plus tôt au scroll — élément encore un peu plus haut dans la page */
-const scrollViewport = { once: true, margin: "0px 0px 18% 0px" as const };
+/** Déclenche quand ~30 % de la card est visible — anim vue à l'écran, pas hors champ */
+const scrollViewport = { once: true, amount: 0.3 as const };
 
 type FadeInProps = HTMLMotionProps<"div"> & {
   delay?: number;
@@ -55,12 +55,12 @@ export function ScrollFadeIn({
 }: ScrollFadeInProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 14 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={scrollViewport}
       transition={{
-        duration: 0.65,
-        delay: delay + staggerIndex * 0.1,
+        duration: 0.7,
+        delay: delay + staggerIndex * 0.12,
         ease: easeOut,
       }}
       className={className}
