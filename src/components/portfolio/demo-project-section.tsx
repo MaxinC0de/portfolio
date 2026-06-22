@@ -43,7 +43,7 @@ export function DemoProjectSection() {
             Site responsive, Next.js, formulaire contact. Projet demo — visuels placeholder.
           </CardDescription>
         </CardHeader>
-        <CardFooter className="pt-0 pb-6">
+        <CardFooter className="border-t-0 bg-transparent px-6 pt-2 pb-8">
           <Link
             href="/demo"
             className={cn(buttonVariants({ variant: "outline" }), "inline-flex gap-2")}
