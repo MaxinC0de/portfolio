@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { AvailabilityBadge } from "@/components/shared/availability-badge";
-import { FadeIn } from "@/components/shared/motion";
+import { FadeIn, FadeInBlur } from "@/components/shared/motion";
 import { buttonVariants } from "@/components/ui/button";
 import { pagePaddingX } from "@/lib/layout";
 import { siteConfig } from "@/lib/site-config";
@@ -10,17 +10,17 @@ import { cn } from "@/lib/utils";
 export function HeroSection() {
   return (
     <section className={cn("mx-auto max-w-5xl py-20 md:py-28", pagePaddingX)}>
-      <FadeIn delay={0.05}>
+      <FadeIn delay={0.1}>
         <AvailabilityBadge>{siteConfig.availability}</AvailabilityBadge>
       </FadeIn>
 
-      <FadeIn delay={0.12}>
+      <FadeInBlur delay={0.25}>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
           Sites vitrines & landing pages pour indépendants et TPE
         </h1>
-      </FadeIn>
+      </FadeInBlur>
 
-      <FadeIn delay={0.2}>
+      <FadeIn delay={0.55}>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Sites modernes, rapides et mobiles — livrés en ~7 jours, sans le budget
           d&apos;une agence.
@@ -30,7 +30,7 @@ export function HeroSection() {
         </p>
       </FadeIn>
 
-      <FadeIn delay={0.28}>
+      <FadeIn delay={0.75}>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="#contact" className={buttonVariants({ size: "lg" })}>
             Demander un devis
