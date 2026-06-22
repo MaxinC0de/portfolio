@@ -15,15 +15,17 @@ export function ProcessSection() {
         title="Process"
         description="Pas de maquette Figma — une preview concrète, plus efficace."
       />
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {processSteps.map((step, index) => (
           <Card key={step.title} className="border-border/80 bg-card/80">
-            <CardHeader>
-              <div className="mb-2 flex size-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+            <CardHeader className="flex flex-row items-start gap-4 space-y-0">
+              <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
                 {index + 1}
               </div>
-              <CardTitle>{step.title}</CardTitle>
-              <CardDescription>{step.description}</CardDescription>
+              <div className="flex min-w-0 flex-1 flex-col gap-1.5 text-left">
+                <CardTitle className="leading-snug">{step.title}</CardTitle>
+                <CardDescription>{step.description}</CardDescription>
+              </div>
             </CardHeader>
           </Card>
         ))}

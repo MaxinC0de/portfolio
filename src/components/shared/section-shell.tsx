@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { pagePaddingX } from "@/lib/layout";
 
 type SectionShellProps = {
   id?: string;
@@ -24,7 +25,7 @@ export function SectionShell({
         className,
       )}
     >
-      <div className={cn("mx-auto max-w-5xl px-4", containerClassName)}>
+      <div className={cn("mx-auto max-w-5xl", pagePaddingX, containerClassName)}>
         {children}
       </div>
     </section>

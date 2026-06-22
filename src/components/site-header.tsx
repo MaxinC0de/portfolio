@@ -3,6 +3,7 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site-config";
+import { pagePaddingX } from "@/lib/layout";
 
 type SiteHeaderProps = {
   variant?: "portfolio" | "demo";
@@ -27,7 +28,7 @@ export function SiteHeader({ variant = "portfolio" }: SiteHeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
+      <div className={cn("mx-auto flex h-16 max-w-5xl items-center justify-between", pagePaddingX)}>
         <Link
           href={isDemo ? "/demo" : "/"}
           className="text-sm font-semibold tracking-tight"

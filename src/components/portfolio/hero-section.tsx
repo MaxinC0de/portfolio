@@ -2,11 +2,13 @@ import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
+import { pagePaddingX } from "@/lib/layout";
 import { siteConfig } from "@/lib/site-config";
+import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   return (
-    <section className="mx-auto max-w-5xl px-4 py-20 md:py-28">
+    <section className={cn("mx-auto max-w-5xl py-20 md:py-28", pagePaddingX)}>
       <Badge variant="secondary" className="mb-6">
         {siteConfig.availability}
       </Badge>

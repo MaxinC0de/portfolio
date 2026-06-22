@@ -18,7 +18,11 @@ export function StackPricingSection() {
       <SectionHeader title="Stack" />
       <div className="flex flex-wrap gap-2">
         {stackItems.map((tech) => (
-          <Badge key={tech} variant="secondary">
+          <Badge
+            key={tech}
+            variant="outline"
+            className="rounded-full border-border/80 bg-muted/40 px-3 py-1 font-normal"
+          >
             {tech}
           </Badge>
         ))}
