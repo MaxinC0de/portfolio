@@ -22,14 +22,15 @@ export function DemoProjectSection() {
         title="Exemple de réalisation"
         description="Projet demo — site vitrine pour un photographe professionnel."
       />
-      <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-        <div className="relative aspect-[16/9]">
+      <Card className="gap-0 overflow-hidden p-0 transition-shadow hover:shadow-lg">
+        <div className="relative aspect-[16/9] w-full">
           <Image
             src={demoPreviewImage}
             alt="Aperçu du site demo Studio Lumière"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 1024px"
+            priority
           />
         </div>
         <CardHeader>

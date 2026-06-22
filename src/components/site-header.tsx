@@ -18,6 +18,7 @@ const demoLinks = [
   { href: "#services", label: "Services" },
   { href: "#galerie", label: "Galerie" },
   { href: "#contact", label: "Contact" },
+  { href: "/", label: "Portfolio" },
 ];
 
 export function SiteHeader({ variant = "portfolio" }: SiteHeaderProps) {
@@ -35,14 +36,29 @@ export function SiteHeader({ variant = "portfolio" }: SiteHeaderProps) {
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-foreground">
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link key={link.href} href={link.href} className="hover:text-foreground">
+                {link.label}
+              </Link>
+            ) : (
+              <a key={link.href} href={link.href} className="hover:text-foreground">
+                {link.label}
+              </a>
+            ),
+          )}
         </nav>
 
-        <Link href="#contact" className={cn(buttonVariants(), "text-xs sm:text-sm")}>
+        {isDemo ? (
+          <Link
+            href="/"
+            className="text-xs text-muted-foreground hover:text-foreground md:hidden"
+          >
+            Portfolio
+          </Link>
+        ) : null}
+
+        <Link href="#contact" className={cn(buttonVariants(), "text-xs sm:text-sm shrink-0")}>
           {isDemo ? "Demander un devis" : "Me contacter"}
         </Link>
       </div>

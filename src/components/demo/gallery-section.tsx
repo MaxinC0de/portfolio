@@ -13,7 +13,7 @@ export function DemoGallerySection() {
         {galleryImages.map((image) => (
           <Card
             key={image.src}
-            className="group overflow-hidden p-0 ring-0 transition-transform hover:scale-[1.02]"
+            className="group gap-0 overflow-hidden p-0 py-0 ring-0 transition-transform hover:scale-[1.02]"
           >
             <div className="relative aspect-square overflow-hidden">
               <Image
