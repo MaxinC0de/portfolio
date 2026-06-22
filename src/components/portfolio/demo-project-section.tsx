@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -11,6 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { demoPreviewImage } from "@/lib/demo-data";
 import { cn } from "@/lib/utils";
 
 export function DemoProjectSection() {
@@ -21,11 +23,19 @@ export function DemoProjectSection() {
         description="Projet demo — site vitrine pour un photographe professionnel."
       />
       <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-        <div className="aspect-[16/9] bg-gradient-to-br from-primary/10 via-muted to-accent" />
+        <div className="relative aspect-[16/9]">
+          <Image
+            src={demoPreviewImage}
+            alt="Aperçu du site demo Studio Lumière"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 1024px"
+          />
+        </div>
         <CardHeader>
           <CardTitle>Studio Lumière — Site vitrine</CardTitle>
           <CardDescription>
-            Site responsive, Next.js, formulaire contact. Projet demo.
+            Site responsive, Next.js, formulaire contact. Projet demo — visuels placeholder.
           </CardDescription>
         </CardHeader>
         <CardFooter>

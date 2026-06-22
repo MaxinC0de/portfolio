@@ -89,12 +89,6 @@ export function ContactForm({ subject = "Nouveau message portfolio" }: ContactFo
           Erreur d&apos;envoi. Écrivez-moi à {siteConfig.email}.
         </p>
       )}
-      {!siteConfig.formSpreeId && status === "idle" && (
-        <p className="text-sm text-muted-foreground">
-          Configurez NEXT_PUBLIC_FORMSPREE_ID pour activer le formulaire. En attendant, le bouton
-          ouvre votre client mail.
-        </p>
-      )}
     </form>
   );
 }
